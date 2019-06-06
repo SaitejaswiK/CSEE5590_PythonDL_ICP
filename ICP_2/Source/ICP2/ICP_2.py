@@ -24,7 +24,7 @@ for i in range(n):
     num = int(input('Enter the value to be inserted:'))
     Lbs.append(num)
     kilograms = num * 0.454
-    Kgs.append(kilograms)
+    Kgs.append(round(kilograms))
 print(Lbs)
 print(Kgs)
 
