@@ -22,16 +22,14 @@ class Employee:
 class FulltimeEmployee(Employee):
     def __init__(self,n,f,s,d):
         Employee.__init__(self,n,f,s,d)
-
-
-if __name__ == "__main__":
-    e1 = Employee("Tejaswi","Koppuravuri",5000,"CS")
-    e2 = Employee("Kartheek", "Katta", 6000, "CS")
-    e3 = Employee("Harish", "Tata", 5650, "CS")
-    e4 = FulltimeEmployee("Anchal", "Tiwari", 6500, "CS")
-
+    e1 = Employee("Tejaswi", "Koppuravuri", 5000, "CS")
+    e2 = Employee("Kartheek", "Katta", 5000, "CS")
+    e3 = Employee("Harish", "Tata", 5000, "CS")
     e1.display()
     e2.display()
     e3.display()
-    e4.display()
-    Employee.get_avg_sal(Employee)
+
+
+e4 = FulltimeEmployee("Anchal", "Tiwari", 5000, "CS")
+e4.display()
+Employee.get_avg_sal(Employee)
