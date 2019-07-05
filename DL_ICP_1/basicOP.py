@@ -13,7 +13,10 @@ X_train, X_test, Y_train, Y_test = train_test_split(dataset[:,0:8], dataset[:,8]
 np.random.seed(155)
 my_first_nn = Sequential() # create model
 my_first_nn.add(Dense(20, input_dim=8, activation='relu')) # hidden layer
-my_first_nn.add(Dense(30, )) # hidden layer
+my_first_nn.add(Dense(30, activation='sigmoid')) # hidden layer
+my_first_nn.add(Dense(10, activation='relu')) # hidden layer
+my_first_nn.add(Dense(15, activation='tanh')) # hidden layer
+my_first_nn.add(Dense(9, activation='relu')) # hidden layer
 my_first_nn.add(Dense(1, activation='sigmoid')) # output layer
 my_first_nn.compile(loss='binary_crossentropy', optimizer='adam')
 my_first_nn_fitted = my_first_nn.fit(X_train, Y_train, epochs=100, verbose=0,
