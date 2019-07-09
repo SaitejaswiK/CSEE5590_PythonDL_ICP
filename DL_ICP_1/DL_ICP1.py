@@ -7,7 +7,7 @@ from keras.layers.core import Dense
 dataset = pd.read_csv('Breas Cancer.csv')
 dataset.info()
 
-x = dataset1 = dataset.iloc[:, [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,31]]
+x = dataset1 = dataset.iloc[:, 2:31]
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 dataset['enc_diagnosis'] = le.fit_transform(dataset['diagnosis'].astype('str'))
